@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f9fa;
+      text-align: center;
+      padding: 30px;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+
+    .cards-container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      width: 250px;
+      border-radius: 20px;
+      padding: 30px 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      background: #fff;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-title {
+      font-weight: bold;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .card-desc {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .card a {
+      display: inline-block;
+      text-decoration: none;
+      font-weight: bold;
+      color: #e23744;
+    }
+
+    .card-1 {
+      background: #ffe6e6;
+    }
+
+    .card-2 {
+      background: #fff8e1;
+    }
+
+    .card-3 {
+      background: #ede7f6;
+    }
+
+    .card-4 {
+      background: #e0f7fa;
+    }
+  </style>
+</head>
+<body>
+  <h2>Welcome to MedSecure</h2>
+
+  <div class="cards-container">
+    <div class="card card-1">
+      <div class="card-title">Add Prescription</div>
+      <div class="card-desc">Enter new prescriptions for patients securely.</div>
+      <a href="/add_prescription">Check it out ➜</a>
+    </div>
+
+    <div class="card card-2">
+      <div class="card-title">View Prescriptions</div>
+      <div class="card-desc">Browse all recorded prescriptions quickly.</div>
+      <a href="/fetch_prescriptions">Check it out ➜</a>
+    </div>
+
+    <div class="card card-3">
+      <div class="card-title">View Modifications</div>
+      <div class="card-desc">Track any changes or updates made to prescriptions.</div>
+      <a href="/fetch_modifications">Check it out ➜</a>
+    </div>
+
+    <div class="card card-4">
+      <div class="card-title">Logout</div>
+      <div class="card-desc">Safely sign out from your MedSecure dashboard.</div>
+      <a href="/logout">Check it out ➜</a>
+    </div>
+  </div>
+</body>
+</html>

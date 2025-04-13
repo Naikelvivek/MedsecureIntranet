@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Modify Prescription</title>
+</head>
+<body>
+    <h2>Modify Prescription</h2>
+    <form method="POST" action="{{ url_for('modify_prescription') }}">
+        <label for="patient_id">Select Patient:</label>
+        <select name="patient_id" required>
+            {% for patient_id in patient_ids %}
+                <option value="{{ patient_id }}">Patient {{ patient_id }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+        <label for="prescription">Enter Updated Prescription:</label>
+        <input type="text" name="prescription" required>
+        <br><br>
+        <button type="submit">Modify Prescription</button>
+    </form>
+    <br>
+    <a href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+</body>
+</html>
